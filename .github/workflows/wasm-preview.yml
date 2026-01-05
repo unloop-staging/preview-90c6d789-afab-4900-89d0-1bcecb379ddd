@@ -7,6 +7,8 @@ on:
       # Only trigger on code changes, not documentation/metadata
       - 'src/**'
       - 'ui/**'
+      - 'components/**'
+      - 'material-1.0/**'
       - 'Cargo.toml'
       - 'build.rs'
       - '.github/workflows/**'
