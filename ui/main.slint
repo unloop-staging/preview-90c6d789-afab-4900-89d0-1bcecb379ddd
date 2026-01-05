@@ -13,19 +13,19 @@ export component App inherits MaterialWindow {
     height: 480px;
     background: #1E1E1E;
     
-    in-out property <string> active-screen: "home";
+    in-out property <string> active_screen: "home";
     in-out property <AppData> data: {
-        current-temp: 72,
-        target-temp: 72,
+        current_temp: 72,
+        target_temp: 72,
         humidity: 45,
-        hvac-status: "ok",
-        wifi-status: "ok",
-        temp-unit: "°F",
+        hvac_status: "ok",
+        wifi_status: "ok",
+        temp_unit: "°F",
         brightness: 80,
-        auto-dim: true,
-        temp-offset: 0,
-        schedule-enabled: false,
-        device-version: "1.0.0",
+        auto_dim: true,
+        temp_offset: 0,
+        schedule_enabled: false,
+        device_version: "1.0.0",
 
     };
     
@@ -36,7 +36,7 @@ export component App inherits MaterialWindow {
     
     VerticalLayout {
         Rectangle {
-            vertical-stretch: 1;
+            vertical_stretch: 1;
             
             if active-screen == "home" : HomeScreen {
                 data <=> root.data;
@@ -60,7 +60,7 @@ export component App inherits MaterialWindow {
                 alignment: space-evenly;
                 
                 Rectangle {
-                    horizontal-stretch: 1;
+                    horizontal_stretch: 1;
                     
                     TouchArea {
                         clicked => { active-screen = "home"; }
@@ -77,14 +77,14 @@ export component App inherits MaterialWindow {
                         
                         Text {
                             text: "Home";
-                            font-size: 12px;
+                            font_size: 12px;
                             color: active-screen == "home" ? #3AA1F5 : #9E9E9E;
-                            horizontal-alignment: center;
+                            horizontal_alignment: center;
                         }
                     }
                 }
                 Rectangle {
-                    horizontal-stretch: 1;
+                    horizontal_stretch: 1;
                     
                     TouchArea {
                         clicked => { active-screen = "control"; }
@@ -101,14 +101,14 @@ export component App inherits MaterialWindow {
                         
                         Text {
                             text: "Control";
-                            font-size: 12px;
+                            font_size: 12px;
                             color: active-screen == "control" ? #3AA1F5 : #9E9E9E;
-                            horizontal-alignment: center;
+                            horizontal_alignment: center;
                         }
                     }
                 }
                 Rectangle {
-                    horizontal-stretch: 1;
+                    horizontal_stretch: 1;
                     
                     TouchArea {
                         clicked => { active-screen = "settings"; }
@@ -125,9 +125,9 @@ export component App inherits MaterialWindow {
                         
                         Text {
                             text: "Settings";
-                            font-size: 12px;
+                            font_size: 12px;
                             color: active-screen == "settings" ? #3AA1F5 : #9E9E9E;
-                            horizontal-alignment: center;
+                            horizontal_alignment: center;
                         }
                     }
                 }
