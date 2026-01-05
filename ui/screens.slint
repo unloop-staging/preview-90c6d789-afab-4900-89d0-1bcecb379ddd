@@ -40,7 +40,7 @@ export component HomeScreen inherits Rectangle {
                         MetricCard {
                             data: {
                                 label: "Current",
-                                value: data.current-temp,
+                                value: data.current_temp,
                                 unit: "°F",
                                 trend: "",
                                 trend-value: ""
@@ -49,7 +49,7 @@ export component HomeScreen inherits Rectangle {
                         MetricCard {
                             data: {
                                 label: "Target",
-                                value: data.target-temp,
+                                value: data.target_temp,
                                 unit: "°F",
                                 trend: "",
                                 trend-value: ""
@@ -92,7 +92,7 @@ export component HomeScreen inherits Rectangle {
                                 
                                 StatusIndicator {
                                     level: StatusLevel.ok;
-                                    label: data.hvac-status;
+                                    label: data.hvac_status;
                                 }
                             }
                             HorizontalLayout {
@@ -106,7 +106,7 @@ export component HomeScreen inherits Rectangle {
                                 
                                 StatusIndicator {
                                     level: StatusLevel.ok;
-                                    label: data.wifi-status;
+                                    label: data.wifi_status;
                                 }
                             }
                         }
@@ -167,7 +167,7 @@ export component ControlScreen inherits Rectangle {
                         spacing: 4px;
                         
                         Text {
-                            text: data.current-temp;
+                            text: data.current_temp;
                             font-size: 64px;
                             font-weight: 300;
                             color: white;
@@ -199,7 +199,7 @@ export component ControlScreen inherits Rectangle {
                     }
                     
                     ValueStepper {
-                        value <=> data.target-temp;
+                        value <=> data.target_temp;
                         min: 60;
                         max: 85;
                         step: 1;
@@ -394,7 +394,7 @@ export component SettingsScreen inherits Rectangle {
                                     }
                                     
                                     Switch {
-                                        checked <=> data.auto-dim;
+                                        checked <=> data.auto_dim;
                                     }
                                 }
                             }
@@ -437,7 +437,7 @@ export component SettingsScreen inherits Rectangle {
                                     }
                                     
                                     ValueStepperCompact {
-                                        value <=> data.temp-offset;
+                                        value <=> data.temp_offset;
                                         min: -5;
                                         max: 5;
                                         step: 0.5;
@@ -464,7 +464,7 @@ export component SettingsScreen inherits Rectangle {
                                     }
                                     
                                     Switch {
-                                        checked <=> data.schedule-enabled;
+                                        checked <=> data.schedule_enabled;
                                     }
                                 }
                             }
@@ -533,7 +533,7 @@ export component SettingsScreen inherits Rectangle {
                                     }
                                     
                                     Text {
-                                        text: data.device-version;
+                                        text: data.device_version;
                                         font-size: 14px;
                                         color: #9E9E9E;
                                         vertical-alignment: center;
